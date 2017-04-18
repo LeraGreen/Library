@@ -1,0 +1,136 @@
+.tariff-intro {
+
+  &__inner {
+    @include third-container();
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+
+      padding-left: 70px;
+      padding-right: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 120px;
+      padding-right: 100px;
+    }
+
+    &--direct {
+
+      @media (min-width: $screen-lg) {
+        padding-left: 120px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-right: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-left: 160px;
+        padding-right: 160px;
+      }
+    }
+  }
+
+  &__item-title {
+    color: $grey-super-dark;
+    font-size: $font-size-big;
+    line-height: 1.222em;
+    font-weight: $light;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-lg) {
+      text-align: left;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-biggen;
+    text-align: center;
+    color: $grey-super-dark;
+    line-height: 1.5em;
+
+    @media (min-width: $screen-lg) {
+      text-align: left;
+    }
+
+    &--strong {
+      font-weight: $bold;
+      line-height: 1.2em;
+      text-align: left;
+
+      @media (min-width: $screen-xl) {
+        font-size: $font-size-larger;
+      }
+    }
+
+    &--quotes {
+      padding-left: 35px;
+      position: relative;
+      margin-top: 20px;
+
+      @media (min-width: $screen-lg) {
+        padding-left: 50px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 30px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/icon-quotes.svg");
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+
+        @media (min-width: $screen-lg) {
+          width: 30px;
+          height: 30px;
+          background-size: 30px 25px;
+        }
+      }
+    }
+
+    &--direct {
+      padding-left: 90px;
+      position: relative;
+
+      @media (min-width: $screen-lg) {
+        padding-left: 0;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 70px;
+        height: 29px;
+        background-image: url("../img/direct-mobile.png");
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+
+        @media (min-width: $screen-lg) {
+          width: 102px;
+          height: 42px;
+          background-image: url("../img/direct-desktop.png");
+          background-repeat: no-repeat;
+          top: 0;
+          left: -110px;
+        }
+
+        @media (min-width: $screen-xl) {
+          left: -150px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.btn {
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+  touch-action: manipulation;
+  width: 250px;
+  white-space: pre-wrap;
+  font-size: $font-size-small;
+  line-height: 2.667em;
+  text-transform: uppercase;
+  color: $grey-darkest;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background-color: $main-color;
+  border-radius: 2px;
+  border-bottom: 2px solid $main-darker;
+
+  @media (min-width: $screen-lg) {
+    width: 225px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    background-color: $main-dark;
+  }
+}
+
+.btn--calc {
+  position: relative;
+  padding-left: 55px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-weight: $semibold;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 26px;
+    background-image: url("../img/sprite-icons-min.png");
+    background-repeat: no-repeat;
+    background-position: -116px -14px;
+    left: 18px;
+    top: 0;
+    transform: translateY(50%);
+  }
+}
+
+.btn--presentation {
+  padding-left: 55px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 33px;
+    height: 24px;
+    background-image: url("../img/sprite-icons-min.png");
+    background-repeat: no-repeat;
+    background-position: -229px -15px;
+    left: 18px;
+    top: 0;
+    transform: translateY(50%);
+  }
+}
+
+.btn--submit {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: $font-size-small;
+  line-height: 1.909em;
+  font-weight: $bold;
+  border-bottom: 2px solid $main-darker;
+  padding-top: 13px;
+  padding-bottom: 10px;
+
+  @media (min-width: $screen-xl) {
+    font-size: $font-size-bigger;
+    line-height: 2.000em;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}

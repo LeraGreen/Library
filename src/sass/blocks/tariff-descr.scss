@@ -1,0 +1,51 @@
+.tariff-descr {
+  background-image: url("../img/tariff-descr-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  @media (min-width: $screen-lg) {
+    background-image: url("../img/tariff-descr-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: left 51px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-position: 101px 50px;
+  }
+
+  &__inner {
+    @include third-container();
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      padding-left: 250px;
+      padding-right: 10px;
+      text-align: left;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 500px;
+      padding-right: 40px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-big;
+    margin-bottom: 20px;
+    color: $grey-super-dark;
+  }
+
+  &__text {
+    font-size: $font-size-biggen;
+    color: $grey-super-dark;
+    line-height: 1.5em;
+  }
+
+  &__color-text {
+    color: $font-price;
+  }
+}

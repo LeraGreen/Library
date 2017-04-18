@@ -1,0 +1,105 @@
+.promotion-steps {
+  background-color: $bg-dark-deep;
+
+  &__inner {
+    width: 89.6875%;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-bottom: 33px;
+
+    @media (min-width: $screen-md) {
+      width: 93.93%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: 30px;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+
+      .promotion-steps__content {
+
+        @media (min-width: $screen-md) {
+          padding-bottom: 25px;
+        }
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__step {
+    font-size: $font-size-title;
+    line-height: 0.583em;
+    color: $main-title;
+
+    @media (min-width: $screen-md) {
+      width: 17%;
+      text-align: right;
+    }
+  }
+
+  &__content {
+
+    @media (min-width: $screen-md) {
+      width: 70%;
+      padding-left: 30px;
+      border-left: 1px solid $grey-little-darken;
+    }
+  }
+
+  &__period {
+    font-size: $font-size-small;
+    line-height: 1.167em;
+    color: $grey-light;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      color: $grey-lighten;
+    }
+  }
+
+  &__step-title {
+    color: $main-title;
+    font-size: $font-size;
+    line-height: 1.818em;
+    @media (min-width: $screen-lg) {
+      line-height: 1.5em;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-biggen;
+    line-height: 1.273em;
+    color: #fff;
+
+    @media (min-width: $screen-lg) {
+      line-height: 1.538em;
+    }
+  }
+}

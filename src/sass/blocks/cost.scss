@@ -1,0 +1,82 @@
+.cost {
+  margin-top: 10px;
+  background-color: #fff;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-top: 80px;
+  }
+
+  &--tariff {
+    margin-top: 0;
+
+    .cost__inner {
+
+      @media (min-width: $screen-xl) {
+        padding: 40px 162px;
+      }
+    }
+  }
+
+  &__inner {
+    @include third-container();
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: $font-size-biggen;
+    color: $grey-little-darken;
+    line-height: 1.5em;
+
+    &--border {
+      border: 1px solid $grey-super-dark;
+    }
+
+    &--block {
+      padding: 15px 50px;
+      margin-bottom: 10px;
+
+      @media (min-width: $screen-md) {
+        width: 47%;
+      }
+    }
+
+    &--strong {
+      font-weight: $bold;
+    }
+  }
+
+  &__price {
+    color: $font-price;
+  }
+
+  &__blocks-wrap {
+    margin-top: 25px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

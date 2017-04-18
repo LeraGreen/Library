@@ -1,0 +1,12 @@
+.map {
+  width: 100%;
+  min-height: 461px;
+
+  @media (min-width: $screen-md) {
+    min-height: 461px;
+  }
+
+  @media (min-width: $screen-lg) {
+    min-height: 860px;
+  }
+}

@@ -1,0 +1,104 @@
+.portfolio-tasks {
+  background-image: url("../img/bg-pattern.png");
+  background-repeat: repeat;
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAFZAgMAAAAgJH0JAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wMdDh0C0ZPR8gAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAJUExUReHh4fT09P///36O/kQAAAABYktHRAJmC3xkAAAAFUlEQVQoz2NwYWBgcGEYJUfJIUICAFzYPRkgrqm6AAAAAElFTkSuQmCC);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+
+  &__text {
+    width: 320px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: $grey-super-dark;
+    font-size: $font-size-biggen;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-larger;
+    }
+  }
+
+  &__inner {
+    padding-top: 28px;
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 50px;
+    }
+  }
+
+  &__table-wrapper {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 660px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 30px;
+    }
+  }
+
+  &__table-scroll {
+    width: 100%;
+    overflow-x: auto;
+
+    @media (min-width: $screen-lg) {
+      overflow-x: visible;
+    }
+  }
+
+  &__counter {
+    @include list();
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__counter-item {
+    width: 40px;
+    height: 60px;
+    background-color: $grey-super-dark;
+    background-image: linear-gradient(to bottom, #343434 50%, #3c3c3c 50%);
+    color: #fff;
+    text-align: center;
+    font-size: $font-size-large;
+    padding: 5px;
+    line-height: 1.5em;
+    margin-right: 5px;
+
+    @media (min-width: $screen-lg) {
+      width: 53px;
+      height: 73px;
+      font-size: $font-size-huge;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 75px;
+      height: 95px;
+      font-size: $font-size-super-huge;
+    }
+  }
+}

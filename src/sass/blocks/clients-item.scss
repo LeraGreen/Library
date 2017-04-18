@@ -1,0 +1,138 @@
+.clients-item {
+  background-color: $main-brighter;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAABCAYAAABKdCfXAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wMOFQA7IyWBBgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAZSURBVAjXY/z2SOk/wxABf//+Z/j37z8DADI2CO/LXrkfAAAAAElFTkSuQmCC);
+  background-repeat: repeat;
+  margin-right: 20px;
+  width: 330px;
+
+  @media (min-width: $screen-s) {
+    width: 376px;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-right: 7px;
+    width: 287px;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 261px;
+  }
+
+  &__header {
+    background-color: $grey-super-dark;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $screen-md) {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $main-link;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: $bold;
+    font-size: $font-size-big;
+    line-height: 1.611em;
+    cursor: pointer;
+    width: 65%;
+  }
+
+  &__example-query {
+    margin-left: 18px;
+    color: $grey-super-dark;
+    width: 55%;
+    font-size: $font-size-big;
+    max-height: 60px;
+    overflow: hidden;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-bigger;
+      max-height: 54px;
+    }
+  }
+
+  &__example-chart {
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    canvas {
+      width: 280px;
+      height: 130px;
+
+      @media (min-width: $screen-s) {
+        width: 310px;
+        height: 140px;
+      }
+
+      @media (min-width: $screen-md) {
+        width: 230px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 210px;
+      }
+    }
+  }
+
+  &__main {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    @include clearfix();
+  }
+
+  &__pos-title {
+    display: block;
+  }
+
+  &__example-pos {
+    color: $grey-super-dark;
+    margin-right: 10px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(197,172,0,0.3);
+    float: right;
+  }
+
+  &__position {
+    font-size: $font-size-large;
+    line-height: 0.733em;
+  }
+
+  &__pos-title {
+    font-size: $font-size;
+    line-height: 1.154em;
+    letter-spacing: 0.04em;
+  }
+
+  &__tab {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+    width: 10%;
+
+    &--left {
+      padding-left: 10px;
+    }
+
+    &--right {
+      padding-right: 10px;
+    }
+
+    &:hover .svg-path {
+      fill: #fff;
+    }
+  }
+}

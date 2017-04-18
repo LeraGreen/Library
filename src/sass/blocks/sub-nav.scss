@@ -1,0 +1,42 @@
+.sub-nav {
+  padding: 0;
+  padding-left: 38px;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 5px;
+  }
+}
+
+.sub-nav__link {
+  text-decoration: none;
+  color: $grey;
+  font-size: $font-size;
+  line-height: 2.154em;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  padding-left: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-bigger;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size;
+    line-height: 1.5em;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::before {
+    position: absolute;
+    content: "- ";
+    left: 0;
+    top: 5px;
+  }
+}

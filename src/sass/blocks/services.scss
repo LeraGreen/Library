@@ -1,0 +1,319 @@
+.services {
+
+  @media ( min-width: $screen-xl ) {
+    margin-bottom: 125px;
+  }
+
+  .tab--disabled {
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    margin: 0 auto;
+
+    @media ( min-width: $screen-md ) {
+      // width: 580px;
+      margin: 0 auto;
+    }
+
+    @media ( min-width: $screen-xl ) {
+      width: 911px;
+      margin: 0 auto;
+      // padding-left: 100px;
+      // padding-right: 100px;
+      position: relative;
+    }
+  }
+
+  &__tab {
+
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    &:hover .svg-path {
+
+      @media (min-width: $screen-xl) {
+        fill: $grey-super-dark;
+      }
+    }
+
+
+    &--left {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__item-title {
+    margin-top: 0;
+    font-size: $font-size-big;
+    line-height: 1.333em;
+    text-transform: uppercase;
+    font-weight: $light;
+    color: $grey-super-dark;
+    width: 65%;
+    margin-bottom: 0;
+
+    @media ( min-width: $screen-xl ) {
+      font-size: $font-size-large;
+    }
+  }
+
+  &__item {
+    background-color: #fff;
+    width: 350px;
+    margin-right: 20px;
+
+    @media (min-width: $screen-s) {
+      width: 426px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 660px;
+      min-height: 295px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 800px;
+      min-height: 367px;
+    }
+
+    &--tariffs {
+      @media (min-width: $screen-s) {
+      background-image: url("../img/bg-tariffs-mobile.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+      @media (min-width: $screen-md) {
+        background-image: url("../img/bg-tariffs.png");
+        background-repeat: no-repeat;
+        background-position: -21px bottom;
+      }
+
+      @media (min-width: $screen-xl) {
+        background-position: bottom;
+      }
+    }
+
+    &--tariff-transparent {
+      @media (min-width: $screen-s) {
+      background-image: url("../img/bg-tariff-transparent-mobile.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+      @media (min-width: $screen-md) {
+        background-image: url("../img/bg-tariff-transparent.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+      }
+
+      @media (min-width: $screen-xl) {
+        background-position: bottom;
+      }
+    }
+
+    &--usability {
+      @media (min-width: $screen-s) {
+      background-image: url("../img/bg-usability-mobile.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+      @media (min-width: $screen-md) {
+        background-image: url("../img/bg-usability.png");
+        background-repeat: no-repeat;
+        background-position: -28px bottom;
+      }
+
+      @media (min-width: $screen-xl) {
+        background-position: bottom;
+      }
+    }
+
+    &--links {
+      @media (min-width: $screen-s) {
+      background-image: url("../img/bg-links-mobile.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+      @media (min-width: $screen-md) {
+        background-image: url("../img/bg-links.png");
+        background-repeat: no-repeat;
+        background-position: -28px bottom
+      }
+
+      @media (min-width: $screen-xl) {
+        background-position: bottom;
+      }
+    }
+
+    &--save {
+      @media (min-width: $screen-s) {
+      background-image: url("../img/bg-save-mobile.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+      @media (min-width: $screen-md) {
+        background-image: url("../img/bg-save.png");
+        background-repeat: no-repeat;
+        background-position: -31px bottom;
+      }
+
+      @media (min-width: $screen-xl) {
+        background-position: bottom;
+      }
+    }
+
+    &--crm {
+      @media (min-width: $screen-s) {
+      background-image: url("../img/bg-services-crm-mobile.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+      @media (min-width: $screen-md) {
+        background-image: url("../img/bg-services-crm.png");
+        background-repeat: no-repeat;
+        background-position: -28px bottom;
+      }
+
+      @media (min-width: $screen-xl) {
+        background-position: bottom;
+      }
+    }
+
+    &--hands {
+
+      @media (min-width: $screen-s) {
+        background-image: url("../img/bg-hands-mobile.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+      }
+
+      @media (min-width: $screen-md) {
+        background-image: url("../img/bg-hands.png");
+        background-repeat: no-repeat;
+        background-position: -9px bottom;
+      }
+
+      @media (min-width: $screen-xl) {
+        background-position: bottom;
+      }
+    }
+  }
+
+  &__list {
+    @include list();
+    display: flex;
+    width: 100000px;
+  }
+
+  &__item-inner {
+    padding: 31px 20px 5px;
+    height: 100%;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 85px;
+      padding-right: 85px;
+      padding-bottom: 30px;
+      padding-top: 55px;
+    }
+  }
+
+  &__item-header {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    @media ( min-width: $screen-md ) {
+      margin-bottom: 35px;
+    }
+
+    @media ( min-width: $screen-xl ) {
+      justify-content: center;
+    }
+  }
+
+  &__item-text {
+    text-align: left;
+    font-size: $font-size;
+    line-height: 1.750em;
+    color: $grey-little-darken;
+
+    @media (min-width: $screen-s) {
+      padding-left: 100px;
+    }
+
+    @media ( min-width: $screen-md ) {
+      font-size: $font-size;
+      padding-left: 240px;
+    }
+
+    @media ( min-width: $screen-xl ) {
+      padding-left: 210px;
+      line-height: 1.692em;
+      font-size: $font-size-biggen;
+    }
+  }
+
+  &__item-tab {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover .svg-path {
+      fill: $grey-super-dark;
+    }
+
+    svg {
+
+      @media (min-width: $screen-md) {
+        width: 17px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__wrap-list {
+    width: 350px;
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    @media (min-width: $screen-s) {
+      width: 426px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 660px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 800px;
+    }
+  }
+}

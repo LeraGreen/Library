@@ -1,0 +1,152 @@
+.benefits-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  justify-content: space-between;
+
+  @media (min-width: $screen-md) {
+    justify-content: center;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $screen-xl) {
+    min-height: 90px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-left: 25px;
+    padding-right: 25px;
+    min-height: 77px;
+  }
+
+  &__item {
+    width: 24.5%;
+    border: 1px solid $font-help-text;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 2px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 22%;
+      margin-right: 5px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 7px;
+      width: 22%;
+      margin-right: 5px;
+    }
+
+    &:hover {
+
+      @media (min-width: $screen-lg) {
+        animation-name: scale-icon-tariffs;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &--no-service {
+      border: 1px solid $grey-light;
+
+      .benefits-list__text {
+        color: $grey-light;
+      }
+    }
+  }
+
+  &__text {
+    color: $font-help-text;
+    font-size: $font-size-little;
+    margin-bottom: 0;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size-small;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-lower;
+      line-height: 1.090em;
+    }
+
+    &--strong {
+      display: block;
+      font-size: $font-size-big;
+      text-transform: uppercase;
+      font-weight: $light;
+      padding-top: 3px;
+      padding-bottom: 3px;
+
+      @media (min-width: $screen-md) {
+        font-size: $font-size-big;
+      }
+
+      @media (min-width: $screen-xl) {
+        font-size: $font-size-title-md;
+      }
+    }
+
+    &--no,
+    &--yes {
+      font-size: 0;
+      width: $font-size-big;
+      height: $font-size-big;
+
+      @media (min-width: $screen-md) {
+        font-size: 0;
+        width: 23px;
+        height: 23px;
+      }
+
+      @media (min-width: $screen-xl) {
+        font-size: 0;
+        width: $font-size-title-md;
+        height: $font-size-title-md;
+        background-size: 100%;
+      }
+    }
+
+    &--no {
+      background-image: url("../img/cancel.svg");
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      margin-top: 3px;
+      margin-bottom: 3px;
+
+      @media (min-width: $screen-md) {
+        background-size: 23px 23px;
+      }
+    }
+
+    &--yes {
+      background-image: url("../img/checked.svg");
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      margin-top: 3px;
+      margin-bottom: 3px;
+
+      @media (min-width: $screen-md) {
+        background-size: 23px 23px;
+      }
+    }
+  }
+}
+
+@keyframes scale-icon-tariffs {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}

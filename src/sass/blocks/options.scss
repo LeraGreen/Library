@@ -1,0 +1,59 @@
+.options {
+  background-color: #fff;
+  background-image: url("../img/bg-options-mobile.png");
+  background-repeat: no-repeat;
+  background-position:  right bottom;
+
+  @media (min-width: $screen-xl) {
+    background-image: url("../img/bg-options-desktop.png");
+    background-repeat: no-repeat;
+    background-position:  right bottom;
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    padding: 20px 20px 35px;
+
+    @media (min-width: $screen-xl) {
+      padding: 40px 500px 20px 50px;
+    }
+
+    .title {
+
+      @media (min-width: $screen-xl) {
+        padding: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  &__list {
+    @include list();
+    padding-right: 40px;
+
+    @media (min-width: $screen-md) {
+      padding-right: 80px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 0;
+      margin-top: 40px;
+    }
+
+    .options__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-biggen;
+    color: $grey-super-dark;
+  }
+
+  &__item-title {
+    font-size: $font-size-larger;
+    line-height: 1.6em;
+    color: $grey-super-dark;
+    font-weight: $bold;
+  }
+}

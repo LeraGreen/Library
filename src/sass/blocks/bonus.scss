@@ -1,0 +1,61 @@
+.bonus {
+  background-color: $main-color;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-image: url("../img/bg-bonus-desktop.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    width: 287px;
+    margin: 0 auto;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      width: 620px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 40px;
+      text-align: left;
+      padding-right: 416px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .title {
+
+      @media (min-width: $screen-xl) {
+        text-align: left;
+        padding: 0;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $font-size-biggen;
+    color: $grey-little-darken;
+    line-height: 1.273em;
+
+    @media (min-width: $screen-xl) {
+      line-height: 1.5em;
+    }
+  }
+}

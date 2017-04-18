@@ -1,0 +1,56 @@
+.popup {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  background-color: rgba(200,200,200,0.75);
+  left: 0;
+  top: 0;
+  z-index: 300;
+
+  .form-main {
+    position: absolute;
+    top: 30px;
+    width: 310px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    @media (min-width: $screen-md) {
+      width: 500px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 600px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 800px;
+    }
+  }
+
+  .form-main__inner {
+    position: relative;
+    padding-top: 70px
+  }
+
+  .popup__close {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    padding: 5px;
+    cursor: pointer;
+
+    @media (min-width: $screen-lg) {
+      right: -70px;
+    }
+
+    &:hover .svg-path {
+
+      @media (min-width: $screen-lg) {
+        fill: $main-color;
+      }
+    }
+  }
+}

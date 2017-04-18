@@ -1,0 +1,114 @@
+.clients {
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 145px;
+  }
+
+  &__inner {
+    padding-top: 40px;
+    margin: 0 auto;
+    padding-bottom: 53px;
+
+    @media (min-width: $screen-md) {
+      width: 660px;
+      margin: 0 auto;
+      padding-bottom: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: relative;
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 922px;
+      margin: 0 auto;
+      padding-left: 61px;
+      padding-right: 61px;
+    }
+  }
+
+  &__tab {
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    &--left {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (min-width: $screen-xl) {
+        transform: none;
+      }
+    }
+
+    &--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (min-width: $screen-xl) {
+        transform: none;
+      }
+    }
+
+    &:hover .svg-path {
+      fill: $grey-super-dark;
+    }
+  }
+
+  .tab--disabled {
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+    font-weight: $light;
+    text-transform: uppercase;
+    font-size: $font-size-bigger;
+    line-height: 1.313em;
+    color: $grey-darkest;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-large;
+      line-height: 1.500em;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 10000px;
+  }
+
+  &__wrap-list {
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 330px;
+
+    @media (min-width: $screen-s) {
+      width: 376px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 581px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width:797px;
+    }
+  }
+}

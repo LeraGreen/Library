@@ -1,0 +1,160 @@
+.work-steps {
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 140px;
+  }
+
+  &__inner {
+    width: 89.6875%;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 52px;
+
+    @media (min-width: $screen-md) {
+      width: 90.90%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding-bottom: 35px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 5px;
+      width: 798px;
+      margin: 0 auto;
+      padding-right: 80px;
+    }
+  }
+
+  &__item {
+    padding-top: 20px;
+    padding-left: 70px;
+    position: relative;
+    cursor: pointer;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+      padding-left: 90px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 140px;
+      margin-bottom: 50px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "шаг";
+      width: 55px;
+      height: 55px;
+      border: 1px solid $font-second-color;
+      border-radius: 50%;
+      color: $grey;
+      font-size: $font-size-smallest;
+      line-height: 2.125em;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 5px;
+      left: 0;
+      top: 0;
+      background-color: $grey-lighten;
+
+      @media (min-width: $screen-xl) {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    &:hover .work-sters__wrap-text {
+
+      @media (min-width: $screen-lg) {
+        animation-name: scale-icon;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+    }
+  }
+
+  &__item:last-child{
+    background-color: $grey-lighten;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wQZEQUfGraKeAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAACYktHRAD/h4/MvwAAAAtJREFUCB1jWH4GAAIdAXR9HbTqAAAAAElFTkSuQmCC);
+    background-repeat: repeat-y;
+    background-position: 26px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 45px;
+      background-position: 34px;
+    }
+  }
+
+  &__title {
+    color: $grey-darkest;
+    font-size: $font-size-larger;
+    line-height: 1.333em;
+    margin-bottom: 5px;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-big;
+      line-height: 1.667em;
+    }
+  }
+
+  &__text {
+    font-size: $font-size;
+    line-height: 1.273em;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-biggen;
+      line-height: 1.538em;
+    }
+  }
+
+  &__help-text {
+    font-size: $font-size-small;
+    line-height: 1.273em;
+    font-weight: $bold;
+    color: $font-second-color;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-biggen;
+      line-height: 1.538em;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    color: $main-brighter;
+    font-size: $font-size-title;
+    line-height: 0.917em;
+    left: 0;
+    top: 0;
+    transform: translate(50%, 105%);
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-large;
+      line-height: 0.933em;
+    }
+  }
+}
+
+@keyframes scale-text {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05)
+  }
+}

@@ -1,0 +1,132 @@
+.carousel-create-sites {
+  margin-top: 40px;
+
+  &__inner {
+    width: 330px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      width: 660px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: auto;
+    }
+  }
+
+  &__list {
+    @include list();
+  }
+
+  &__item-title {
+    color: $main-color;
+    font-size: $font-size-biggen;
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
+    font-weight: $bold;
+    text-align: center;
+    padding: 15px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-bigger;
+    }
+  }
+
+  &__tab {
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+
+    &:hover .svg-path {
+      fill: $grey-super-dark;
+      stroke: $grey-super-dark;
+    }
+
+    &.tab--disabled {
+      display: none;
+    }
+
+    &--left {
+      top: -10px;
+      left: 34px;
+
+      @media (min-width: $screen-lg) {
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      @media (min-width: $screen-xl) {
+        left: 0;
+      }
+    }
+
+    &--right {
+      top: -10px;
+      right: 34px;
+
+      @media (min-width: $screen-lg) {
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      @media (min-width: $screen-xl) {
+        right: 0;
+      }
+    }
+
+    svg {
+
+      @media (min-width: $screen-md) {
+        width: 17px;
+        height: 25px;
+      }
+
+      @media (min-width: $screen-md) {
+        width: 20px;
+        height: 27px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 25px;
+        height: 35px;
+      }
+    }
+  }
+
+  &__list-wrap {
+    width: 261px;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow-x: hidden;
+
+    @media (min-width: $screen-md) {
+      width: 563px;
+      margin-top: 20px;
+    }
+    @media (min-width: $screen-xl) {
+      width: 804px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    width: 100000px;
+  }
+
+  &__item {
+    width: 261px;
+    margin-right: 200px;
+    background-color: $grey-super-dark;
+
+    @media (min-width: $screen-md) {
+      margin-right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-right: 10px;
+    }
+  }
+}

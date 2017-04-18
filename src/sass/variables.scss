@@ -1,0 +1,92 @@
+///fonts///
+
+$font-family: "Open Sans", Arial, sans-serif;
+$light: 300;
+$normal: 400;
+$bold: 700;
+$semibold: 600;
+
+$font-size-super-smallest: 8px;
+$font-size-lower: 9px;
+$font-size-little: 10px;
+$font-size-smallest: 11px;
+$font-size-small: 12px;
+$font-size: 13px;
+$font-size-biggen: 14px;
+$font-size-larger: 15px;
+$font-size-bigger: 16px;
+$font-size-big: 18px;
+$font-size-medium: 19px;
+$font-size-medium-plus: 20px;
+$font-size-md-larger: 22px;
+$font-size-title: 24px;
+$font-size-title-md: 26px;
+$font-size-title-big: 28px;
+$font-size-large: 30px;
+$font-size-huge: 40px;
+$font-size-super-huge: 55px;
+
+///colors///
+
+$main-lighter: #ddcc00;
+$main-color: #efdd11;
+$main-bright: #e6d940;
+$main-brighter: #f5e120;
+$main-dark: #c7b80e;
+$main-darker: #dbca0f;
+$main-darken: #ecd300;
+$main-link: #fae52b;
+$main-title: #e0d555;
+$bg-main: #f7d317;
+
+
+$font-main-color: #7e7e7e;
+$font-second-color: #7b7b7b;
+$font-grey: #6c6c6c;
+$font-title: #6a6a6a;
+$font-dark-title: #515151;
+
+$bg-dark-grey: #343434;
+$bg-dark-deep: #404040;
+$bg-grey-darken: #e5e4e5;
+$bg-grey: #e5e5e5;
+$bg-light-grey: #e4e5e4;
+
+
+$grey-lighter: #c3c3c3;
+$grey-lighten: #f1f1f1;
+$grey-light: #afafaf;
+$grey: #424242;
+$grey-dark: #393939;
+$grey-darken: #868686;
+$grey-little-darken: #5f5f5f;
+$grey-darker: #3d3d3d;
+$grey-darkest: #151515;
+$grey-super-dark: #3a3a3a;
+$grey-footer: #dbdbdb;
+
+$font-price: #39a62e;
+$font-help-text: #86c980;
+
+$font-whitey: #f6f1eb;
+
+$grey-border: #eaeaea;
+
+$red: #f31921;
+
+$error: #FF3300;
+$success: #66CC33;
+
+
+
+///screen///
+$screen-xs: 350px;
+$screen-s: 426px;
+$screen-md: 660px;
+$screen-lg: 960px;
+$screen-xl: 1220px;
+
+//retina
+
+$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
+
