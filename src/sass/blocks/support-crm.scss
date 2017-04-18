@@ -1,0 +1,101 @@
+.support-crm {
+  background-color: #fff;
+
+  @media (min-width: $screen-md) {
+    background-image: url("../img/crm-bg-tablet.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  @media (min-width: $screen-lg) {
+    background-image: url("../../img/bg-crm-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 314px bottom;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-image: url("../../img/bg-crm-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 447px bottom;
+  }
+
+  &__inner {
+    @include third-container();
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      padding-right: 307px;
+      padding-top: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-right: 307px;
+      padding-left: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 471px;
+      padding-left: 30px;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-biggen;
+    line-height: 1.538em;
+    color: $grey-super-dark;
+    text-align: center;
+  }
+
+  &__list {
+    @include list();
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__item-text {
+    font-size: $font-size;
+    color: $grey-super-dark;
+    line-height: 1.364em;
+  }
+
+  &__item-title {
+    font-size: $font-size-larger;
+    color: $grey-super-dark;
+    line-height: 2.333em;
+  }
+
+  &__item {
+    padding-left: 58px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/sprite-services.png");
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+    }
+
+    &--billing {
+
+      &::before {
+        width: 36px;
+        height: 40px;
+        background-position: -15px -204px;
+      }
+    }
+
+    &--tasks {
+
+      &::before {
+        width: 35px;
+        height: 36px;
+        background-position: -210px -274px;
+      }
+    }
+  }
+}

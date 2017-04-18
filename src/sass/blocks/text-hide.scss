@@ -1,0 +1,6 @@
+.text-hide {
+  transition: all 1s ease-out;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}

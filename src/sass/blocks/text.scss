@@ -1,0 +1,14 @@
+.text {
+
+  &--error {
+    font-size: $font-size-bigger;
+    line-height: 1.5em;
+    color: $error;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-bigger;
+      line-height: 1.5em;
+      color: $error;
+    }
+  }
+}

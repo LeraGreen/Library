@@ -1,0 +1,23 @@
+.block-hide {
+
+  @media (min-width: $screen-md) {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+  }
+}

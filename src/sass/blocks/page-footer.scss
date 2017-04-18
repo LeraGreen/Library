@@ -1,0 +1,50 @@
+.page-footer {
+  background-color: $bg-dark-grey;
+
+  &__inner {
+    padding-top: 25px;
+    width: 297px;
+    margin: 0 auto;
+    padding-bottom: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__adress,
+  &__copyright {
+    font-size: $font-size-small;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-biggen;
+      line-height: 1.333em;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__adress {
+    margin-bottom: 25px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-image: url("../img/location-point.svg");
+    background-repeat: no-repeat;
+    background-position: 40px center;
+
+    @media (min-width: $screen-xl) {
+      background-position: 22px center;
+      background-size: 25px 33px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &--bg-grey-light {
+
+    @media (min-width: $screen-xl) {
+      background-color: $grey-footer;
+    }
+  }
+}

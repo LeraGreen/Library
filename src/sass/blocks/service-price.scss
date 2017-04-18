@@ -1,0 +1,22 @@
+.service-price {
+  color: $font-price;
+  font-size: $font-size-small;
+  line-height: 1.273em;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-biggen;
+  }
+
+  @media (min-width: $screen-xl) {
+   font-size: $font-size-bigger;
+   margin-top: 22px;
+   margin-bottom: 22px;
+  }
+
+  p {
+
+    @media (min-width: $screen-xl) {
+     margin-bottom: 0;
+    }
+  }
+}

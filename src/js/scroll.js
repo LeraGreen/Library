@@ -1,27 +1,103 @@
 'use strict';
 
-var btnScroll = document.querySelector('.btn--scroll');
-btnScroll.addEventListener('click', scrollToForm);
+// для подменю главная
 
-function scrollToForm(event) {
-  event.preventDefault();
-  var form = document.getElementById('form')
-  var formCordinate = form.getBoundingClientRect();
-  var formTop = formCordinate.top;
-  var windowYOffset = window.pageYOffset;
-  var interval = 16;                                      //кол-во кадров в секунду
+// function setListenerSubNav() {
+//   var subMenu = document.getElementById('sub-nav-main-page');
+
+//   if ( subMenu === null ) {
+//     console.log('hi');
+//     return;
+//   }
+
+//   subMenu.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     checkEventTargetMenu(event);
+//   });
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var subMenu = document.getElementById('sub-nav-main-page');
+  if ( subMenu !== null ) {
+    subMenu.addEventListener('click', function() {
+      event.preventDefault();
+      checkEventTargetMenu(event);
+    });
+  }
+});
+
+// setListenerSubNav();
+
+
+function checkEventTargetMenu(event) {
+  if ( event.target.tagName != 'A' || document.documentElement.clientWidth < 960) {
+    return;
+  } else {
+    scrollToBlock(event.target);
+  }
+}
+
+//для кнопки формы в услугах
+
+// function setListenerBtnServices() {
+//   var btnServices = document.getElementById('btn-form-services');
+
+//   if ( btnServices === null ) {
+//     console.log('hi');
+//     return;
+//   }
+
+//   btnServices.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     checkWindowWidth(event.target);
+//   });
+// }
+
+function checkWindowWidth(element) {
+  var windowWidth = document.documentElement.clientWidth;
+  if ( document.documentElement.clientWidth < 960) {
+    scrollToBlockTouchScreen(element);
+  } else {
+    scrollToBlock(element);
+  }
+}
+
+// setListenerBtnServices();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var btnServices = document.getElementById('btn-form-services');
+  if ( btnServices !== null ) {
+    btnServices.addEventListener('click', function() {
+      event.preventDefault();
+      checkWindowWidth(event.target);
+    });
+  }
+});
+
+//скролл на главной
+function scrollToBlock(element) {
+  var blockID = (element.getAttribute('href')).slice(1);
+  var block = document.getElementById(blockID);
+  var blockCordinate = block.getBoundingClientRect();
+  var blockTop = blockCordinate.top;
+
+  var scrolledBlock = document.querySelector('.main-content');
+  var pointScrolledBlock = scrolledBlock.scrollTop;
+  var fixedValue = pointScrolledBlock;
+
+  var interval = 16;
   var time = 1000;
   time = time - ( time % interval );
   var count = time / interval;
   var step = 0;
-  var i = 1;                                              //шаг от 1
+  var i = 1;
 
   var scrollInterval = setInterval(function() {
+
     if ( i <= count ) {
       step = i / count;
-      windowYOffset =  formTop * circ(step);              //Переданное значение максимум = 1. 
-                                                          //Последнее должно быть = 1;
-      window.scrollTo(0, windowYOffset);
+      pointScrolledBlock =  blockTop * quad(step) + fixedValue;
+      scrolledBlock.scrollTop = pointScrolledBlock;
     }
     else {
       clearInterval(scrollInterval);
@@ -30,6 +106,46 @@ function scrollToForm(event) {
   }, interval);
 }
 
-function circ(timeFraction) {
-  return 1 - Math.sin(Math.acos(timeFraction))
+
+function quad(progress) {
+  return Math.pow(progress, 2)
+}
+
+//scroll mobile
+
+
+function scrollToBlockTouchScreen(element) {
+
+  var blockID = (element.getAttribute('href')).slice(1);
+  var block = document.getElementById(blockID);
+  var blockCordinate = block.getBoundingClientRect();
+  var blockTop = blockCordinate.top;
+
+  var scrolledBlock = document.querySelector('.main-content');
+  var pointScrolledBlock = scrolledBlock.scrollTop;
+  // var fixedValue = pointScrolledBlock;
+
+  var pageHeader = document.querySelector('.page-header');
+  var pageHeaderSizes = pageHeader.getBoundingClientRect();
+  var pageHeaderHeight = pageHeaderSizes.bottom - pageHeaderSizes.top;
+
+  var interval = 16;
+  var time = 1000;
+  time = time - ( time % interval );
+  var count = time / interval;
+  var step = 0;
+  var i = 1;
+
+  var scrollInterval = setInterval(function() {
+
+    if ( i <= count ) {
+      step = i / count;
+      // pointScrolledBlock =  blockTop * quad(step) - pageHeaderHeight;
+      scrolledBlock.scrollTop = blockTop * quad(step) - pageHeaderHeight;
+    }
+    else {
+      clearInterval(scrollInterval);
+    }
+    i++;
+  }, interval);
 }

@@ -1,0 +1,163 @@
+.contacts-info {
+  background-color: #fff;
+
+  @media (min-width: $screen-md) {
+    width: 230px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 10;
+  }
+
+  @media (min-width: $screen-lg) {
+    left: auto;
+    right: 20px;
+    top: 263px;
+    height: auto;
+  }
+
+  @media (min-width: $screen-xl) {
+    top: 202px;
+    width: 311px;
+  }
+
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: 100%;
+
+    &--cities-phones {
+
+      .contacts-info__text {
+        color: $grey-darken;
+      }
+
+      .contacts-info__item-inner {
+
+
+        &::before {
+          width: 27px;
+          height: 27px;
+          background-position: -71px -15px;
+        }
+      }
+    }
+
+    &--address {
+
+      .contacts-info__item-inner {
+
+
+        &::before {
+          width: 21px;
+          height: 27px;
+          background-position: -15px -72px;
+        }
+      }
+    }
+
+    &--mail {
+
+      .contacts-info__item-inner {
+
+
+        &::before {
+          width: 26px;
+          height: 19px;
+          background-position: -15px -15px;
+        }
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $grey-border;
+  }
+
+  &__item-inner {
+    width: 287px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    padding-top: 22px;
+    padding-left: 51px;
+    padding-right: 20px;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      padding-left: 15px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 60px;
+      padding-right: 86px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/sprite-icons-contacts.png");
+      background-repeat: no-repeat;
+      left: 0;
+      top: 22px;
+
+      @media (min-width: $screen-md) {
+        background-image: none;
+        content: none;
+      }
+
+      @media (min-width: $screen-xl) {
+        background-image: url("../img/sprite-icons-contacts.png");
+        background-repeat: no-repeat;
+        content: "";
+        left: 22px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $font-size-bigger;
+    line-height: 1.500em;
+    color: $grey-super-dark;
+    font-weight: $light;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size-biggen;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-bigger;
+    }
+  }
+
+  &__data {
+    text-decoration: none;
+    display: inline-block;
+
+    &--phone {
+      color: $grey-super-dark;
+      font-weight: $normal;
+    }
+
+    &--mail {
+      color: $main-bright;
+      margin-bottom: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

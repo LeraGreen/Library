@@ -1,0 +1,100 @@
+.field-text {
+  display: block;
+  margin-bottom: 10px;
+
+  .field-text__message {
+    display: none;
+  }
+
+  &--error {
+
+    .field-text__input {
+      border: 2px solid $error;
+    }
+
+    .field-text__message {
+      display: block;
+      font-size: $font-size-bigger;
+      line-height: 1.5em;
+      color: $error;
+    }
+  }
+
+  &__name {
+    display: block;
+    color: $grey-lighter;
+    font-size: $font-size;
+    line-height: 1.900em;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-larger;
+      line-height: 1.867em;
+    }
+  }
+
+  &__help-text {
+    font-size: $font-size-small;
+    color: $main-color;
+    line-height: 2.111em;
+    margin-bottom: 5px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size;
+      line-height: 2.154em;
+    }
+  }
+
+
+  &__input {
+    width: 100%;
+    touch-action: manipulation;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2.143em;
+    padding: .313em .438em;
+    line-height: 1.375em;
+    font-size: $font-size-biggen;
+    font-family: inherit;
+    background-color: $grey;
+    border: 1px solid #313131;
+    color: $grey-lighter;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-larger;
+      padding: 1.400em 0.667em;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    touch-action: manipulation;
+    display: inline-block;
+    vertical-align: middle;
+    padding: .313em .438em;
+    line-height: 1.375em;
+    font-size: $font-size-biggen;
+    font-family: inherit;
+    background-color: $grey;
+    border: 1px solid #313131;
+    color: $grey-lighter;
+    resize: vertical;
+  }
+
+  &--services {
+
+    @media (min-width: $screen-md) {
+      width: 45%;
+    }
+  }
+
+  &--services-textarea {
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+  }
+
+  &__input-wrap {
+    display: block;
+  }
+}

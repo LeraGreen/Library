@@ -1,0 +1,35 @@
+.main-content {
+  background-color: $grey-lighten;
+
+  @media (min-width: $screen-lg) {
+    height: 100%;
+    margin-left: 239px;
+    overflow: auto;
+    background-color: $grey-lighten;
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-lg) {
+      width: 690px;
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 960px;
+      margin: 0 auto;
+    }
+  }
+
+  &--contacts-page {
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+    }
+  }
+
+  &--scroll {
+    -ms-overflow-style: none;
+  }
+}

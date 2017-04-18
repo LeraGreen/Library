@@ -1,0 +1,89 @@
+.request {
+
+  &__inner {
+    padding-top: 37px;
+    margin-bottom: 35px;
+    background-color: $grey-super-dark;
+
+    @media (min-width: $screen-lg) {
+      background-color: transparent;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 50px;
+    }
+
+    .title {
+
+      @media (min-width: $screen-lg) {
+        color: $grey-darker;
+      }
+    }
+  }
+
+  &__features-item {
+    background-color: $bg-dark-grey;
+    width: 49%;
+    background-color: $bg-dark-grey;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 77px;
+
+    &--mediaplan {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 32px;
+        height: 37px;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-position: -15px -15px;
+        background-image: url("../img/sprite-tariff-icon-and-form.png");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__features-text {
+    color: $grey-lighter;
+    font-size: $font-size;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    line-height: 1.3em;
+    vertical-align: middle;
+  }
+
+  &__link {
+    font-weight: $light;
+    font-size:  $font-size-biggen;
+    line-height: 1.308em;
+    text-decoration: none;
+    color: $main-color;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 80px;
+  }
+
+  &__features-list {
+    @include list();
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}

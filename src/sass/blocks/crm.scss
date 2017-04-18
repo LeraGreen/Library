@@ -1,0 +1,9 @@
+.crm {
+  background-image: url("../img/bg-pattern.png");
+  background-repeat: repeat;
+
+  @media (min-width: $screen-xl) {
+    background-image: none;
+    margin-bottom: 135px;
+  }
+}

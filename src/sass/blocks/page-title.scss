@@ -1,0 +1,73 @@
+.page-title {
+  background-color: $main-darken;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 47px;
+    height: 118px;
+  }
+
+  &--contacts-page {
+
+    @media (min-width: $screen-lg) {
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+
+  &__inner {
+    width: 89.6875%;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      width: 620px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 690px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 960px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title,
+  &__section-name {
+    color: $grey-darker;
+    font-weight: $light;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__section-name {
+    font-size: font-size-biggen;
+    line-height: 1.714em;
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-small;
+      line-height: 2.333em;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-big;
+    line-height: 1.333em;
+    margin: 0;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-title-big;
+      line-height: 1.000em;
+    }
+  }
+}

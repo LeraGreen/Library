@@ -1,0 +1,235 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: $screen-xs;
+  margin: 0;
+  font-family: $font-family;
+  color: $font-main-color;
+  font-size: $font-size;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  padding-top: 80px;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 0;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+input, textarea, keygen, select, button {
+  font-family: $font-family;
+}
+
+p {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 1em;
+}
+
+.js .main-menu {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  min-width: 350px;
+  box-shadow: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  top: 77px;
+
+  @media (min-width: $screen-lg) {
+    position: static;
+    box-shadow: none;
+    min-width: auto;
+  }
+}
+
+.js .main-content {
+  height: 100%;
+  overflow: auto;
+}
+
+
+
+.page-scroll-hidden {
+
+
+  .tariffs__item-inner  .tariffs__benefits-list {
+
+    @media (min-width: $screen-lg) {
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  .tariffs__intro::after {
+
+    @media (min-width: $screen-lg) {
+      opacity: 0;
+      bottom: -100px;
+    }
+  }
+
+  .workers__item::after {
+
+    @media (min-width: $screen-lg) {
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+
+  .services__item {
+
+    @media (min-width: $screen-lg) {
+      background-position: left 260px;
+    }
+  }
+
+  .crm-intro__step  {
+
+    @media (min-width: $screen-lg) {
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  &.crm-features--default::after  {
+    @media (min-width: $screen-lg) {
+      bottom: -20px;
+    }
+  }
+}
+
+.page-scroll-visible {
+
+
+  .tariffs__item-inner  .tariffs__benefits-list {
+
+    @media (min-width: $screen-lg) {
+      transition: opacity .3s ease-in .6s;
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+
+  .tariffs__intro::after {
+
+    @media (min-width: $screen-lg) {
+      opacity: 1;
+      bottom: 0px;
+      transition-property: opacity, bottom;
+      transition-duration: .6s;
+      transition-timing-function: ease-in;
+      transition-delay: .2s;
+    }
+  }
+
+  .workers__item::after {
+
+    @media (min-width: $screen-lg) {
+      transition: opacity 1s ease-in, max-height 1s ease-in;
+      opacity: 1;
+      max-height: 300px;
+    }
+  }
+
+  .services__item {
+
+    @media (min-width: $screen-lg) {
+      background-position: left bottom;
+      transition: background-position 1s ease-in;
+    }
+  }
+
+  .crm-intro__step  {
+
+    @media (min-width: $screen-lg) {
+      transition: opacity 1s ease-in;
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+
+  &.crm-features--default::after  {
+
+    @media (min-width: $screen-lg) {
+      bottom: 0;
+      transition-property: bottom;
+      transition-duration: .6s;
+      transition-timing-function: ease-in;
+    }
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4f4422;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #72622f;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+
+  @media (min-width: $screen-lg) {
+    background: transparent;
+    overflow: visible;
+    width: 8px;
+  }
+}
+
+.no-js .map--contacts-page {
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-md) {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-position: -7px center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $screen-lg) {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-position: -462px center;
+    background-repeat: no-repeat;
+  }
+}
+
+.slides .slide img {
+  max-width: 80% !important;
+  max-height: initial !important;
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+}
+
+.slides .slide {
+  overflow: auto !important;
+}
+
+@keyframes scale-icon {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}

@@ -1,0 +1,26 @@
+.block-show {
+
+  @media (min-width: $screen-md) {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    // overflow: hidden;
+  }
+
+  @media (min-width: $screen-lg) {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    // overflow: hidden;
+  }
+
+  @media (min-width: $screen-xl) {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    // overflow: hidden;
+  }
+}

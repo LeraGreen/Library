@@ -1,0 +1,67 @@
+.develop-price {
+  background-color: #fff;
+
+  &__inner {
+    padding-top: 28px;
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 50px;
+    }
+  }
+
+  &__table-wrapper {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 660px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 840px;
+      margin: 0 auto;
+    }
+  }
+
+  &__table-scroll {
+    width: 100%;
+    overflow-x: auto;
+
+    @media (min-width: $screen-md) {
+      overflow-x: visible;
+    }
+  }
+
+  &__text {
+    font-size: $font-size;
+    color: $grey-super-dark;
+    line-height: 1.273em;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size-biggen;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+}

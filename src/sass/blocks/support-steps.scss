@@ -1,0 +1,125 @@
+.support-steps {
+
+  &__inner {
+    width: 89.6875%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      width: 93.93%;
+      padding-bottom: 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .title {
+
+      @media (min-width: $screen-xl) {
+        font-size: $font-size-medium-plus;
+      }
+    }
+  }
+
+  &__list {
+    @include list();
+    padding-top: 20px;
+
+    .support-steps__item:not(:last-child) {
+      margin-bottom: 25px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__sub-list {
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  &__item-title {
+    font-size: $font-size-larger;
+    line-height: 1.636em;
+    color: $grey-super-dark;
+  }
+
+  &__item-text,
+  &__sub-text {
+    font-size: $font-size;
+    line-height: 1.636em;
+    color: $font-grey;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-biggen;
+    }
+  }
+
+  &__item {
+    padding-left: 45px;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      flex-basis: auto;
+      width: 47%;
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/sprite-services.png");
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+    }
+
+    &--program {
+
+      &::before {
+        width: 30px;
+        height: 41px;
+        background-position: -257px -199px;
+      }
+    }
+
+    &--support {
+
+      &::before {
+        width: 33px;
+        height: 35px;
+        background-position: -317px -209px;
+      }
+    }
+
+    &--web-design {
+
+      &::before {
+        width: 36px;
+        height: 35px;
+        background-position: -80px -274px;
+      }
+    }
+
+    &--info {
+
+      &::before {
+        width: 37px;
+        height: 37px;
+        background-position: -145px -274px;
+      }
+    }
+  }
+}

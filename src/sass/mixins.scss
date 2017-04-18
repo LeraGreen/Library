@@ -1,0 +1,65 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container() {
+ width: 287px;
+ margin: 0 auto;
+
+  @media (min-width: $screen-s) {
+    width: 376px;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 620px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 690px;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 960px;
+  }
+}
+
+@mixin second-container() {
+  width: 287px;
+  margin: 0 auto;
+
+  // @media (min-width: $screen-s) {
+  //   width: 376px;
+  // }
+
+  @media (min-width: $screen-md) {
+    width: 620px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: auto;
+  }
+}
+
+@mixin third-container() {
+  width: 89.6875%;
+  margin: 0 auto;
+
+  @media (min-width: $screen-md) {
+    width: 93.93%;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: auto;
+  }
+}
+
+@mixin list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

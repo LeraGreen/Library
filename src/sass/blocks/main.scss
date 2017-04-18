@@ -1,0 +1,13 @@
+.main {
+
+  &--contacts-page {
+
+    @media (min-width: $screen-md) {
+      position: relative;
+    }
+
+    @media (min-width: $screen-lg) {
+      position: static;
+    }
+  }
+}

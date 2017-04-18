@@ -1,0 +1,56 @@
+.reporting {
+  background-color: #fff;
+
+  background-image: url("../img/reporting-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  @media (min-width: $screen-md) {
+    background-image: url("../img/reporting-bg-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-position: right center;
+  }
+
+  &__inner {
+    @include third-container();
+    text-align: center;
+    padding-bottom: 215px;
+    padding-top: 30px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 250px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 250px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 450px;
+      padding-bottom: 20px;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    color: $grey-super-dark;
+    font-size: $font-size-big;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $grey-super-dark;
+    font-size: $font-size-biggen;
+    line-height: 1.5em;
+  }
+}

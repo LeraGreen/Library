@@ -1,0 +1,41 @@
+.table {
+    min-width: 600px;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      min-width: 800px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 100%;
+      min-width: auto;
+    }
+
+    tr {
+      border-bottom: 1px solid $grey-border;
+    }
+
+    td {
+      padding: .7em;
+      vertical-align: top;
+      font-size: $font-size-bigger;
+      text-align: left;
+
+      @media (min-width: $screen-lg) {
+        padding: 1.1em;
+      }
+    }
+
+  &__title {
+    font-weight: $bold;
+
+    &--half-width {
+      width: 50%;
+    }
+  }
+
+  &__status {
+    color: $font-help-text;
+  }
+}

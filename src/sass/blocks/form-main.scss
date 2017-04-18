@@ -1,0 +1,116 @@
+.form-main {
+  background-color: #343434;
+
+  &__message  {
+    display: none;
+    font-size: $font-size-bigger;
+    line-height: 1.5em;
+  }
+
+  &--error {
+
+    .form-main__message {
+      display: block;
+      color: $error;
+    }
+  }
+
+  &--success {
+
+    .form-main__message {
+      display: block;
+      color: $success;
+    }
+  }
+
+  &--services {
+
+    .form-main__inner {
+
+      @media (min-width: $screen-md) {
+        width: 600px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 660px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__inner {
+    padding-top: 25px;
+    width: 89.6875%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+
+    @media (min-width: $screen-md) {
+      width: 60.60%;
+      margin: 0 auto;
+      max-width: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 488px;
+      margin: 0 auto;
+    }
+
+    .title {
+      color: $font-whitey;
+
+      @media (min-width: $screen-lg) {
+        color: $font-whitey;
+      }
+    }
+  }
+
+  &__promo {
+    font-size: $font-size-biggen;
+    text-align: center;
+    color: $grey-lighter;
+    line-height: 1.273em;
+    margin-bottom: 20px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: $font-size-bigger;
+      line-height: 1.429em;
+    }
+  }
+
+  &__btn-wrap {
+    text-align: center;
+    margin-top: 28px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 45px;
+      padding-left: 132px;
+      padding-right: 132px;
+    }
+
+    &--services {
+
+      @media (min-width: $screen-md) {
+        padding-left: 145px;
+        padding-right: 145px;
+      }
+    }
+  }
+
+  &__content-wrap {
+
+    &--services {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}

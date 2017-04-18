@@ -1,0 +1,181 @@
+.visually-hidden {
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+
+  &--sm {
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+
+  &--md-lg {
+    display: block;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+
+  &--lg {
+    display: block;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &--lg-flex {
+    display: flex;
+
+    @media (min-width: $screen-s) {
+      display: flex;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &--md-inline {
+    display: inline-block;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &--sm-flex {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+    }
+  }
+
+  &--before-xl {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+
+  &--xl-inline-block {
+    display: inline-block;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &--lg-xl-flex {
+    display: flex;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+
+  }
+
+  &--sm-md {
+
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
+}
+

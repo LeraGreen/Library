@@ -1,0 +1,74 @@
+.banner {
+  background-color: #fff;
+
+  &--budget {
+    background-image: url("../img/tariff-banner-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @media (min-width: $screen-md) {
+      background-position: right bottom;
+    }
+
+    @media (min-width: $screen-lg) {
+      background-image: url("../img/tariff-banner-bg-from-tablet.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+  }
+
+  &--top {
+    background-image: url("../img/banner-top-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @media (min-width: $screen-xl) {
+      background-image: url("../img/banner-top-bg-desktop.png");
+      background-repeat: no-repeat;
+      background-position: right top;
+    }
+
+    .banner__inner {
+
+      padding-right: 75px;
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-top: 38px;
+        padding-bottom: 20px;
+        padding-right: 478px;
+      }
+    }
+  }
+
+
+  &__inner {
+    @include second-container();
+    padding-top: 35px;
+    padding-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      padding-right: 120px;
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 60px;
+      padding-right: 329px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    line-height: 1.333em;
+
+    &--top {
+      padding: 0;
+    }
+  }
+}
