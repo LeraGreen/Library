@@ -1,0 +1,12 @@
+image: node
+test:
+  stage: test
+  script:
+   - npm install
+   - npm test
+public:
+  when: manual
+  stage: test
+  script:
+   - npm install
+   - npm start
