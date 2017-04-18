@@ -1,8 +1,8 @@
 {
-  "name": "YellowMedia",
-  "version": "1.0.0",
+  "name": "Library",
+  "version": "0.0.1",
   "private": true,
-  "description": "YellowMedia",
+  "description": "Library",
   "author": "Valeriya Zelenaya",
   "repository": {
     "type": "git",
